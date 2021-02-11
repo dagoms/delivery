@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import com.everis.delivery.repository.ProductRepository;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,13 +24,4 @@ public class Product {
 
 	private double price;
 
-//	public Product update (Long id, ProductRepository ProductRepository) {
-//		Product product = ProductRepository.getOne(id);
-//		
-//		product.setDescription(this.description);
-//		product.price(this.price)
-//		topico.setMensagem(this.mensagem);
-//		
-//		return topico;
-//	}
 }

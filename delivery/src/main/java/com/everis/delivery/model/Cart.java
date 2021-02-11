@@ -39,9 +39,9 @@ public class Cart {
 	@Column(name = "cart_createdAt")
 	private LocalDateTime createdAt;
 
-	@NotNull
-	@Enumerated(EnumType.STRING)
-	private CartStatus status;
+//	@NotNull
+//	@Enumerated(EnumType.STRING)
+//	private CartStatus status;
 
 	@OneToOne
 	@JoinColumn(name = "user_id")
@@ -50,16 +50,4 @@ public class Cart {
 	@OneToMany(mappedBy = "cart", cascade = CascadeType.PERSIST)
 	private List<Market> items;
 
-	public void setCartStatus(CartStatus status) {
-		client.getPayment();
-		if (status == null) {
-			this.status = CartStatus.PENDING;
-//      Teste para efetuar a troca do status do carrinho,
-//		nao consegui fazer rodar, acredito que deveria ter feito uma classe payment
-//		} else {
-//				if (client.getPayment() == PaymentMethod.CASH) {
-//					this.status = CartStatus.COMPLETED;
-
-		}
-	}
 }

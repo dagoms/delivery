@@ -2,6 +2,7 @@ package com.everis.delivery.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -9,19 +10,18 @@ import com.everis.delivery.exceptions.UserNotFoundException;
 import com.everis.delivery.model.User;
 import com.everis.delivery.repository.UserRepository;
 import com.everis.delivery.exceptions.*;
-import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
 public class UserService {
 
-	private final UserRepository userRepository;
+	@Autowired
+	private UserRepository userRepository;
 
 	public List<User> list() {
 		return userRepository.findAll();
 	}
 
-	public User create(User user) {
+	public User save(User user) {
 		return userRepository.save(user);
 	}
 

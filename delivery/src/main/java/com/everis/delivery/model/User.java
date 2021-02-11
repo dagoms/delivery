@@ -2,7 +2,6 @@ package com.everis.delivery.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -31,7 +30,7 @@ public class User {
 	@Column(name = "user_name")
 	private String name;
 
-	@Column(name = "user_phone", length = 19)
+	@Column(name = "user_phone", length = 9)
 	private String phone;
 
 	@Column(name = "user_cpf", length = 11)
@@ -40,6 +39,7 @@ public class User {
 	@Column(name = "user_email")
 	private String email;
 
+	
 	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "address_id")
 	private Address address;

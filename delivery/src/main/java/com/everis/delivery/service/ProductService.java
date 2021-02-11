@@ -2,28 +2,23 @@ package com.everis.delivery.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.everis.delivery.repository.ProductRepository;
 import com.everis.delivery.exceptions.ProductNotFoundException;
 import com.everis.delivery.model.*;
-import com.everis.delivery.form.*;
 
-import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
 public class ProductService {
 
-	private final ProductRepository productRepository;
+	@Autowired
+	private ProductRepository productRepository;
 
 	public List<Product> list() {
 		return productRepository.findAll();
-	}
-
-	public Product create(Product product) {
-		return productRepository.save(product);
 	}
 
 	public Product findById(Long id) throws ProductNotFoundException {
