@@ -48,6 +48,25 @@
 					"response": []
 				},
 				{
+					"name": "http://localhost:8080/clients",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Dago\",\r\n    \"phone\": \"989999999\",\r\n    \"cpf\": \"11111111111\",\r\n    \"email\": \"dagobertomelod@gmail.com\",\r\n    \"payment\": \"PAYMENTCARD\",\r\n    \"address\": {\r\n        \"id\":1,\r\n        \"street\": \"Arcanjo Candido da Silva\",\r\n        \"zipCode\": \"88138300\",\r\n        \"number\": \"1111\",\r\n        \"complement\": \"Aos Fundos\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/clients/edit/1",
+						"description": "PUT para atualizar os dados do cliente, caso queira atualizar os dados e manter o endereço, é necessário informar o id do endereço no JSON"
+					},
+					"response": []
+				},
+				{
 					"name": "http://localhost:8080/clients/1",
 					"request": {
 						"method": "DELETE",
@@ -106,6 +125,24 @@
 							}
 						},
 						"url": "http://localhost:8080/products"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"id\": 1,\r\n    \"description\": \"mouse\",\r\n    \"price\": 130\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/products/edit/1"
 					},
 					"response": []
 				},
