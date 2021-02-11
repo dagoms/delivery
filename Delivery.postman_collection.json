@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "a3930ad6-84d3-4144-8e84-c4685d9bca0f",
+		"name": "Delivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "http://localhost:8080/clients",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teste\",\r\n    \"phone\": \"999999999\",\r\n    \"cpf\": \"11111111111\",\r\n    \"email\": \"dagobertomelod@gmail.com\",\r\n    \"payment\": \"PAYMENTCARD\",\r\n    \"address\": {\r\n        \"street\": \"Arcanjo Candido da Silva\",\r\n        \"zipCode\": \"88138300\",\r\n        \"number\": \"1111\",\r\n        \"complement\": \"Aos Fundos\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/clients"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/clients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"products\": [\r\n        {\"productId\": 1, \"quantity\": 1}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/clients"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/clients/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teste\",\r\n    \"phone\": \"999999999\",\r\n    \"cpf\": \"11111111111\",\r\n    \"email\": \"dagobertomelod@gmail.com\",\r\n    \"payment\": \"PAYMENTCARD\",\r\n    \"address\": {\r\n        \"street\": \"Arcanjo Candido da Silva\",\r\n        \"zipCode\": \"88138300\",\r\n        \"number\": \"1111\",\r\n        \"complement\": \"Aos Fundos\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/clients/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "http://localhost:8080/products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"description\": \"mouse\",\r\n    \"price\": 120\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/products"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"description\": \"mouse\",\r\n    \"price\": 120\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/products"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/products/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"description\": \"mouse\",\r\n    \"price\": 120\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/products/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "http://localhost:8080/cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"products\": [\r\n        {\"productId\": 1, \"quantity\": 1}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/cart"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/cart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"products\": [\r\n        {\"productId\": 1, \"quantity\": 1}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/cart"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/cart/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"products\": [\r\n        {\"productId\": 1, \"quantity\": 1}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/cart/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
